@@ -1,8 +1,8 @@
 import React, { useReducer, useState } from "react";
 import Modal from "./modal";
 import data from "../birthday/Data";
+import { reducer } from "./reducer";
 
-const reducer = (state, action) => {};
 const defaultState = {
   people: [],
   isModalOpen: false,
@@ -17,22 +17,27 @@ const UseReducer = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name) {
-      showModal(true);
-      setPeople((people) => {
-        return [...people, { id: new Date().getTime().toString(), name }];
-      });
+      const newITem = { id: new Date().getTime().toString(), name };
+      dispatch({ type: "ADD_ITEM", payload: newITem });
+
       setName("");
-      console.log(people);
+      console.log(state.people);
     } else {
-      showModal(true);
+      dispatch({ type: "NO_VALUE" });
     }
   };
 
-  console.log(people);
+  const closeModal = () => {
+    dispatch({ type: "CLOSE_MODAL" });
+  };
+
+  console.log(state.people);
   return (
     <>
       <h2>useReducer</h2>
-      {show && <Modal />}
+      {state.isModalOpen && (
+        <Modal modalContent={state.modalContent} closeModal={closeModal} />
+      )}
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -43,10 +48,18 @@ const UseReducer = () => {
       </form>
 
       <div>
-        {people.map((person) => {
+        {state.people.map((person) => {
           return (
             <div key={person.id}>
               <h4>{person.name}</h4>
+              <button
+                type="button"
+                onClick={() =>
+                  dispatch({ type: "REMOVE_ITEM", payload: person.id })
+                }
+              >
+                remove
+              </button>
             </div>
           );
         })}
