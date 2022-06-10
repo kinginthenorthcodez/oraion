@@ -1,11 +1,11 @@
 import React from "react";
-import UseReducer from "./1-useReducer";
+import ContextAPI from "./1-contextAPI/contextAPI";
 
 const App = () => {
   return (
     <>
       <h2>Hooks </h2>
-      <UseReducer />
+      <ContextAPI />
     </>
   );
 };
