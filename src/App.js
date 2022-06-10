@@ -1,11 +1,11 @@
 import React from "react";
-import ContextAPI from "./1-contextAPI/contextAPI";
+import CustomHooks from "./1-customHooks/customhooks";
 
 const App = () => {
   return (
     <>
       <h2>Hooks </h2>
-      <ContextAPI />
+      <CustomHooks />
     </>
   );
 };
