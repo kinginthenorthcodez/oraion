@@ -1,11 +1,11 @@
 import React from "react";
-import CustomHooks from "./1-customHooks/customhooks";
+import PropsType from "./1-PropTypes/Proptypes";
 
 const App = () => {
   return (
     <>
       <h2>Hooks </h2>
-      <CustomHooks />
+      <PropsType />
     </>
   );
 };

@@ -9,7 +9,6 @@ export const useFetch = (url) => {
     const data = await repsonse.json();
     setUsers(data);
     setLoading(false);
-    console.log(data);
   };
 
   useEffect(() => {
