@@ -10,3 +10,11 @@
 img {
   width: 150px;
 }
+
+.logged {
+  color: green;
+}
+
+.loggedOut {
+  color: red;
+}
