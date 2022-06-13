@@ -1,8 +1,6 @@
-# BookStore React APP
+# Oraion React APP
 
-> The Bookstore is a React-Redux application connected to an existing API to create and remove books in a remote server. Users can Display the list of books, Add and Remove a selected book.
-
-![screenshot](./app_screenshot.png)
+> Oraion is a constallation of react and redux concept
 
 ## Built With
 

@@ -16,7 +16,9 @@ const App = () => {
       <h2>Hooks </h2>
       <h3>Counter: {counter}</h3>
       {islogged ? (
-        <h4 className="logged">LoggedIn</h4>
+        <h4 className="logged">
+          LoggedIn <br /> <Index />
+        </h4>
       ) : (
         <h4 className="loggedOut">LoggedOut</h4>
       )}
