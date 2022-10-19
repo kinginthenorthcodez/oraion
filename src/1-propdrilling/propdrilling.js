@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import data from "../birthday/Data";
+import React, { useState } from 'react';
+import data from '../birthday/Data';
 
 const PropDrill = () => {
   const [people, setPeople] = useState(data);
@@ -8,6 +8,7 @@ const PropDrill = () => {
       return people.filter((person) => person.id !== id);
     });
   };
+
   return (
     <>
       <h2>PropDrilling</h2>
@@ -36,7 +37,7 @@ const SinglePerson = ({ person, removeItem }) => {
   return (
     <div key={person.id}>
       <h4>{person.name}</h4>
-      <button type="button" onClick={() => removeItem(person.id)}>
+      <button type='button' onClick={() => removeItem(person.id)}>
         remove
       </button>
     </div>

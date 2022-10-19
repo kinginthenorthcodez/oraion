@@ -1,8 +1,10 @@
-import React from "react";
-import PropsType from "./1-PropTypes/Proptypes";
-import Index from "./pages";
-import { useSelector, useDispatch } from "react-redux";
-import { increament, decreament, isLogged } from "./actions";
+import React from 'react';
+//import PropsType from "./1-PropTypes/Proptypes";
+import Index from './pages';
+import Friends from './1-props/Prop';
+import ContextAPI from './1-contextAPI/contextAPI';
+import { useSelector, useDispatch } from 'react-redux';
+import { increament, decreament, isLogged } from './actions';
 
 // import { reducer } from "./1-useReducer/reducer";
 
@@ -16,36 +18,27 @@ const App = () => {
       <h2>Hooks </h2>
       <h3>Counter: {counter}</h3>
       {islogged ? (
-        <h4 className="logged">
+        <h4 className='logged'>
           LoggedIn <br /> <Index />
         </h4>
       ) : (
-        <h4 className="loggedOut">LoggedOut</h4>
+        <h4 className='loggedOut'>LoggedOut</h4>
       )}
       ;
-      <button type="button" onClick={() => dispatch(increament())}>
+      <button type='button' onClick={() => dispatch(increament())}>
         +
       </button>
-      <button type="button" onClick={() => dispatch(decreament())}>
+      <button type='button' onClick={() => dispatch(decreament())}>
         -
       </button>
-      <button type="button" onClick={() => dispatch(isLogged())}>
+      <button type='button' onClick={() => dispatch(isLogged())}>
         Login
       </button>
+      <h2>Props Example</h2>
+      <Friends />
+      <ContextAPI />
     </>
   );
 };
-
-// const Book = (props) => {
-//   console.log(props);
-//   const { title, author } = props;
-//   return (
-//     <>
-//       <h1>{title}</h1>
-//       <h4>{author}</h4>
-//       {props.children}
-//     </>
-//   );
-// };
 
 export default App;

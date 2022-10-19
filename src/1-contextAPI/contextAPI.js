@@ -1,5 +1,5 @@
-import React, { useState, useContext } from "react";
-import data from "../birthday/Data";
+import React, { useState, useContext } from 'react';
+import data from '../birthday/Data';
 
 const PersonContext = React.createContext(); // has two components named provider and consumer
 const ContextAPI = () => {
@@ -30,11 +30,10 @@ const List = () => {
 
 const SinglePerson = ({ person }) => {
   const { removeItem } = useContext(PersonContext);
-  console.log(data);
   return (
     <div key={person.id}>
       <h4>{person.name}</h4>
-      <button type="button" onClick={() => removeItem(person.id)}>
+      <button type='button' onClick={() => removeItem(person.id)}>
         remove
       </button>
     </div>
