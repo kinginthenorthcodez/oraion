@@ -1,8 +1,8 @@
-import React from "react";
-import User from "./User";
-import { useFetch } from "../1-customHooks/useFetch";
+import React from 'react';
+import User from './User';
+import { useFetch } from '../1-customHooks/useFetch';
 
-const url = "https://api.github.com/users";
+const url = 'https://api.github.com/users';
 
 const PropsType = () => {
   const { Users } = useFetch(url);
